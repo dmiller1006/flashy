@@ -1,0 +1,282 @@
+[
+    {
+        "id": 1,
+        "title": "CompTIA A+",
+        "date_created": "2022-05-24T23:16:30Z",
+        "cards": [
+            {
+                "id": 1,
+                "front_text": "IP",
+                "back_text": "Internet Protocol",
+                "date_created": null,
+                "card_collection": 1
+            },
+            {
+                "id": 4,
+                "front_text": "RJ-11",
+                "back_text": "Old jack",
+                "date_created": null,
+                "card_collection": 1
+            },
+            {
+                "id": 5,
+                "front_text": "CPU",
+                "back_text": "Computer Processing Unit",
+                "date_created": null,
+                "card_collection": 1
+            }
+        ]
+    },
+    {
+        "id": 1,
+        "title": "CompTIA A+",
+        "date_created": "2022-05-24T23:16:30Z",
+        "cards": [
+            {
+                "id": 1,
+                "front_text": "IP",
+                "back_text": "Internet Protocol",
+                "date_created": null,
+                "card_collection": 1
+            },
+            {
+                "id": 4,
+                "front_text": "RJ-11",
+                "back_text": "Old jack",
+                "date_created": null,
+                "card_collection": 1
+            },
+            {
+                "id": 5,
+                "front_text": "CPU",
+                "back_text": "Computer Processing Unit",
+                "date_created": null,
+                "card_collection": 1
+            }
+        ]
+    },
+    {
+        "id": 1,
+        "title": "CompTIA A+",
+        "date_created": "2022-05-24T23:16:30Z",
+        "cards": [
+            {
+                "id": 1,
+                "front_text": "IP",
+                "back_text": "Internet Protocol",
+                "date_created": null,
+                "card_collection": 1
+            },
+            {
+                "id": 4,
+                "front_text": "RJ-11",
+                "back_text": "Old jack",
+                "date_created": null,
+                "card_collection": 1
+            },
+            {
+                "id": 5,
+                "front_text": "CPU",
+                "back_text": "Computer Processing Unit",
+                "date_created": null,
+                "card_collection": 1
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "title": "CompTIA Sec+",
+        "date_created": null,
+        "cards": [
+            {
+                "id": 2,
+                "front_text": "Least Privilege",
+                "back_text": "Only allowing minimum permissions to users.",
+                "date_created": "2022-05-24T23:17:55Z",
+                "card_collection": 2
+            },
+            {
+                "id": 6,
+                "front_text": "IDS",
+                "back_text": "Intrusion Detection System",
+                "date_created": "2022-05-24T23:27:40Z",
+                "card_collection": 2
+            },
+            {
+                "id": 3,
+                "front_text": "InfoSec",
+                "back_text": "Information Security",
+                "date_created": null,
+                "card_collection": 2
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "title": "CompTIA Sec+",
+        "date_created": null,
+        "cards": [
+            {
+                "id": 2,
+                "front_text": "Least Privilege",
+                "back_text": "Only allowing minimum permissions to users.",
+                "date_created": "2022-05-24T23:17:55Z",
+                "card_collection": 2
+            },
+            {
+                "id": 6,
+                "front_text": "IDS",
+                "back_text": "Intrusion Detection System",
+                "date_created": "2022-05-24T23:27:40Z",
+                "card_collection": 2
+            },
+            {
+                "id": 3,
+                "front_text": "InfoSec",
+                "back_text": "Information Security",
+                "date_created": null,
+                "card_collection": 2
+            }
+        ]
+    },
+    {
+        "id": 1,
+        "title": "CompTIA A+",
+        "date_created": "2022-05-24T23:16:30Z",
+        "cards": [
+            {
+                "id": 1,
+                "front_text": "IP",
+                "back_text": "Internet Protocol",
+                "date_created": null,
+                "card_collection": 1
+            },
+            {
+                "id": 4,
+                "front_text": "RJ-11",
+                "back_text": "Old jack",
+                "date_created": null,
+                "card_collection": 1
+            },
+            {
+                "id": 5,
+                "front_text": "CPU",
+                "back_text": "Computer Processing Unit",
+                "date_created": null,
+                "card_collection": 1
+            }
+        ]
+    },
+    {
+        "id": 1,
+        "title": "CompTIA A+",
+        "date_created": "2022-05-24T23:16:30Z",
+        "cards": [
+            {
+                "id": 1,
+                "front_text": "IP",
+                "back_text": "Internet Protocol",
+                "date_created": null,
+                "card_collection": 1
+            },
+            {
+                "id": 4,
+                "front_text": "RJ-11",
+                "back_text": "Old jack",
+                "date_created": null,
+                "card_collection": 1
+            },
+            {
+                "id": 5,
+                "front_text": "CPU",
+                "back_text": "Computer Processing Unit",
+                "date_created": null,
+                "card_collection": 1
+            }
+        ]
+    },
+    {
+        "id": 1,
+        "title": "CompTIA A+",
+        "date_created": "2022-05-24T23:16:30Z",
+        "cards": [
+            {
+                "id": 1,
+                "front_text": "IP",
+                "back_text": "Internet Protocol",
+                "date_created": null,
+                "card_collection": 1
+            },
+            {
+                "id": 4,
+                "front_text": "RJ-11",
+                "back_text": "Old jack",
+                "date_created": null,
+                "card_collection": 1
+            },
+            {
+                "id": 5,
+                "front_text": "CPU",
+                "back_text": "Computer Processing Unit",
+                "date_created": null,
+                "card_collection": 1
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "title": "CompTIA Sec+",
+        "date_created": null,
+        "cards": [
+            {
+                "id": 2,
+                "front_text": "Least Privilege",
+                "back_text": "Only allowing minimum permissions to users.",
+                "date_created": "2022-05-24T23:17:55Z",
+                "card_collection": 2
+            },
+            {
+                "id": 6,
+                "front_text": "IDS",
+                "back_text": "Intrusion Detection System",
+                "date_created": "2022-05-24T23:27:40Z",
+                "card_collection": 2
+            },
+            {
+                "id": 3,
+                "front_text": "InfoSec",
+                "back_text": "Information Security",
+                "date_created": null,
+                "card_collection": 2
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "title": "CompTIA Sec+",
+        "date_created": null,
+        "cards": [
+            {
+                "id": 2,
+                "front_text": "Least Privilege",
+                "back_text": "Only allowing minimum permissions to users.",
+                "date_created": "2022-05-24T23:17:55Z",
+                "card_collection": 2
+            },
+            {
+                "id": 6,
+                "front_text": "IDS",
+                "back_text": "Intrusion Detection System",
+                "date_created": "2022-05-24T23:27:40Z",
+                "card_collection": 2
+            },
+            {
+                "id": 3,
+                "front_text": "InfoSec",
+                "back_text": "Information Security",
+                "date_created": null,
+                "card_collection": 2
+            }
+        ]
+    }
+]
