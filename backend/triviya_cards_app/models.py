@@ -2,7 +2,7 @@ from django.db import models
 import datetime
 
 
-class CardCollection(models.Model):
+class FlashSet(models.Model):
     title = models.CharField(max_length=50)
     date_created = models.DateTimeField(blank=True, null=True)
 
@@ -16,7 +16,7 @@ class Card(models.Model):
     front_text = models.CharField(max_length=255)
     back_text = models.CharField(max_length=255)
     date_created = models.DateTimeField(blank=True, null=True)
-    card_collection = models.ForeignKey(CardCollection, on_delete=models.CASCADE, related_name="cards")
+    flashset = models.ForeignKey(FlashSet, on_delete=models.CASCADE, related_name="cards")
 
     def __str__(self):
         return self.front_text
