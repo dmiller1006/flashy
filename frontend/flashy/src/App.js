@@ -12,6 +12,7 @@ import FlashSetDetailPage from './pages/FlashSetDetailPage'
 import AccountPage from './pages/AccountPage'
 import TriviaHomePage from './pages/TriviaHomePage'
 import CreateFlashSetPage from './pages/CreateFlashSetPage'
+import FlashSetDeleteConfirm from './pages/FlashSetDeleteConfirm'
 
 
 const App = () => {
@@ -26,6 +27,7 @@ const App = () => {
           <Route exact path="account/" element={ <AccountPage /> }/>
           <Route exact path="trivia/" element={ <TriviaHomePage /> }/>
           <Route exact path="flashsets/:id" element={<FlashSetDetailPage />} />
+          <Route exact path="flashsets/:id/delete" element={<FlashSetDeleteConfirm />} />
         </Routes>
       </BrowserRouter>
     </div>

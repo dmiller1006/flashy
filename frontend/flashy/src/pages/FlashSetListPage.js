@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import NavBar from '../components/NavBar'
 import FlashSetCard from '../components/FlashSetCard'
-import '../pages/FlashSetListPage.css'
+import '../pages/FlashcardLayout.css'
 import FlashyAPI from '../api/FlashyAPI'
 
 
@@ -30,9 +30,9 @@ const FlashSetListPage = () => {
   return (
     <div className="wrapper">
       <NavBar />
-      <h1>your flashesets</h1>
+      <h1>your flashsets</h1>
       <a href="flashsets/new"><h3>create a new flashset</h3></a>
-        <div className="parent ">
+        <div className="parent">
           {renderFlashSets()}
         </div>
     </div>

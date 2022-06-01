@@ -2,9 +2,12 @@ import React from 'react'
 import NavBar from '../components/NavBar'
 import FlashyAPI from '../api/FlashyAPI'
 import { Form, Button } from 'react-bootstrap'
+import { useNavigate } from 'react-router-dom'
 
 
 const CreateFlashSetPage = () => {
+  const navigate = useNavigate()
+
   const handleFormSubmit = async (evt) => {
     evt.preventDefault()
 
@@ -12,8 +15,10 @@ const CreateFlashSetPage = () => {
       "title": evt.target[0].value,
     }
 
-    FlashyAPI.createFlashset(data)
-
+    const dataBack = await FlashyAPI.createFlashset(data)
+    if (dataBack) {
+      navigate(`/flashsets/${dataBack.id}`)
+    }
   }
 
   return (
