@@ -1,9 +1,0 @@
-# Tuesday, May 24
-	DONE
-related models work with DRF
-new card collections can be created by POST to http://127.0.0.1:8000/cardcollections/
-new cards by POST to http://127.0.0.1:8000/cards/ SPECIFIYING CURRENT COLLECTION ID
-	NEXT TIME
-work on authentication
-start to build out front end to create, read, update and delete collections
-

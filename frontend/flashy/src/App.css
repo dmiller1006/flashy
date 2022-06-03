@@ -41,3 +41,7 @@
   background-color: gray;
   height: 100vh;
 }
+
+.triviaButton {
+  margin: 25px;
+}

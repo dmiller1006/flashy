@@ -13,6 +13,7 @@ import AccountPage from './pages/AccountPage'
 import TriviaHomePage from './pages/TriviaHomePage'
 import CreateFlashSetPage from './pages/CreateFlashSetPage'
 import FlashSetDeleteConfirm from './pages/FlashSetDeleteConfirm'
+import RandomGamePage from './pages/RandomGamePage';
 
 
 const App = () => {
@@ -28,6 +29,7 @@ const App = () => {
           <Route exact path="trivia/" element={ <TriviaHomePage /> }/>
           <Route exact path="flashsets/:id" element={<FlashSetDetailPage />} />
           <Route exact path="flashsets/:id/delete" element={<FlashSetDeleteConfirm />} />
+          <Route exact path="trivia/random" element={<RandomGamePage />} />
         </Routes>
       </BrowserRouter>
     </div>

@@ -83,6 +83,13 @@ const createCard = async (frontText, backText, flashsetID) => {
     return await tryCatchFetch(url,init)
 }
 
+const getRandomTrivia = async (num) => {
+    const url = `https://the-trivia-api.com/api/questions?limit=${num}`
+    const data = await tryCatchFetch(url)
+    console.log(data)
+    return data
+}
+
 
 const exportItems = {
     fetchFlashsets,
@@ -91,6 +98,7 @@ const exportItems = {
     deleteFlashset,
     editFlashsetTitle,
     createCard,
+    getRandomTrivia,
 }
 
 export default exportItems
