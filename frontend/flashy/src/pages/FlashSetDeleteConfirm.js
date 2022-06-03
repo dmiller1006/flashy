@@ -2,6 +2,7 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import { useNavigate, useParams } from "react-router-dom"
 import NavBar from '../components/NavBar'
+import Footer from '../components/Footer'
 import FlashyAPI from '../api/FlashyAPI'
 import { Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
@@ -41,12 +42,15 @@ const FlashSetDeleteConfirm = () => {
     }
 
   return (
-    <>
+    <div className="wrapper">
     <NavBar />
     <h2>Are you sure you want to permanently delete the following flashset?</h2>
 
     {showFlashset()}
-    </>
+        <div style={{ position: 'absolute', width: '100%', bottom: '0' }}>
+            <Footer />
+        </div>
+    </div>
   )
 }
 

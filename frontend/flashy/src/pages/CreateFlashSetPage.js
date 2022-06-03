@@ -1,5 +1,6 @@
 import React from 'react'
 import NavBar from '../components/NavBar'
+import Footer from '../components/Footer'
 import FlashyAPI from '../api/FlashyAPI'
 import { Form, Button } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
@@ -36,6 +37,9 @@ const CreateFlashSetPage = () => {
           Submit
         </Button>
       </Form>
+      <div style={{ position: 'absolute', width: '100%', bottom: '0' }}>
+        <Footer />
+      </div>
     </div>
   )
 }

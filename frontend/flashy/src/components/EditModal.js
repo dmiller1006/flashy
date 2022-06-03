@@ -8,8 +8,9 @@ const EditModal = ({setNewName}) => {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
-    const handleSubmit = (e) => {
-        setNewName(document.getElementById('exampleForm.ControlInput1').value)
+    const handleSubmit = (event) => {
+        event.preventDefault()
+        setNewName(document.getElementById('editTitleForm.Input1').value)
         handleClose()
     }
 
@@ -25,22 +26,21 @@ const EditModal = ({setNewName}) => {
                     <Modal.Title>change flashset title</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <Form>
-                        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                    <Form onSubmit={handleSubmit}>
+                        <Form.Group className="mb-3" controlId="editTitleForm.Input1">
                             <Form.Label>new flashset title:</Form.Label>
                             <Form.Control
                                 placeholder="new title"
-                                autoFocus
                                 name="newTitle"
                             />
                         </Form.Group>
                     </Form>
                 </Modal.Body>
                 <Modal.Footer>
-                    <Button variant="secondary" onClick={handleClose}>
+                    <Button type="button" variant="secondary" onClick={handleClose}>
                         close
                     </Button>
-                    <Button variant="primary" onClick={handleSubmit}>
+                    <Button type="button" variant="primary" onClick={handleSubmit}>
                         save
                     </Button>
                 </Modal.Footer>

@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import NavBar from '../components/NavBar'
+import Footer from '../components/Footer'
 import { useParams } from "react-router-dom"
 // import SingleCard from '../components/SingleCard'
 import FlashyAPI from '../api/FlashyAPI'
@@ -50,13 +51,16 @@ const FlashSetDetailPage = () => {
     }
 
   return (
-    <div>
+    <div className="wrapper">
         <NavBar />
       <h1>{flashset && flashset.title}</h1>
       <div>{renderButtons()}</div>
         <div className="parent">
           {renderFlashset()}
         </div>
+      <div style={{ position: 'absolute', width: '100%', bottom: '0' }}>
+        <Footer />
+      </div>
     </div>
   )
 }

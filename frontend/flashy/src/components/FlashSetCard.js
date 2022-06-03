@@ -4,12 +4,12 @@ import { Link } from 'react-router-dom'
 import '../pages/FlashcardLayout.css'
 
 
-const CollectionCard = (props) => {
+const FlashSetCard = (props) => {
   const flashsetinfo = props.flashset
 
   return (
     <div>
-        <Card style={{ margin: '15px', height: '250px' }} className="card">
+        <Card className="flashcard-top">
             <Card.Body>
                 <Card.Title>{flashsetinfo.title}</Card.Title>
                 <Link to={`${flashsetinfo.id}/`}>
@@ -26,4 +26,4 @@ const CollectionCard = (props) => {
   )
 }
 
-export default CollectionCard
+export default FlashSetCard

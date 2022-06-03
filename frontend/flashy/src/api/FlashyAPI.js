@@ -46,20 +46,41 @@ const deleteFlashset = async (flashsetObj) => {
         },
     }
 
-    const deleteFetch = await fetch(url, init)
+    await fetch(url, init)
     return await {"status": "done"}
 }
 
-const changeTitle = async (flashsetObj) => {
+const editFlashsetTitle = async (flashsetObj, newName) => {
     const url = `http://127.0.0.1:8000/flashsets/${flashsetObj.id}/`
+    const bodyObj = {
+        "title": newName
+    }
     const init = {
         method: "PUT",
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify(flashsetObj)
+        body: JSON.stringify(bodyObj)
     }
-    console.log(flashsetObj)
+    return await tryCatchFetch(url, init)
+}
+
+const createCard = async (frontText, backText, flashsetID) => {
+    const url = `http://127.0.0.1:8000/cards/`
+    const bodyObj = {
+        "front_text": frontText,
+        "back_text": backText,
+        "flashset": flashsetID
+    }
+    const init = {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(bodyObj)
+    }
+
+    return await tryCatchFetch(url,init)
 }
 
 
@@ -68,6 +89,8 @@ const exportItems = {
     fetchSingleFlashset,
     createFlashset,
     deleteFlashset,
+    editFlashsetTitle,
+    createCard,
 }
 
 export default exportItems
