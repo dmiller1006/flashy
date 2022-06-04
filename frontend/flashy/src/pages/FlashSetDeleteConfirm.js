@@ -47,9 +47,9 @@ const FlashSetDeleteConfirm = () => {
     <h2>Are you sure you want to permanently delete the following flashset?</h2>
 
     {showFlashset()}
-        <div style={{ position: 'absolute', width: '100%', bottom: '0' }}>
-            <Footer />
-        </div>
+          <div style={{ position: 'absolute', width: '100%', bottom: '0' }}>
+              <Footer />
+          </div>
     </div>
   )
 }

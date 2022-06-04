@@ -3,7 +3,7 @@ import { Modal, Form, Button } from 'react-bootstrap'
 import FlashyAPI from '../api/FlashyAPI'
 
 
-const NewCardModal = ({ flashsetID, setFlashset }) => {
+const NewCardModal = ({ flashsetid, setFlashset }) => {
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
@@ -12,11 +12,20 @@ const NewCardModal = ({ flashsetID, setFlashset }) => {
     const handleSubmit = async () => {
         const frontText = document.getElementById('form.input1').value
         const backText = document.getElementById('form.input2').value
-        const createCard = await FlashyAPI.createCard(frontText, backText, flashsetID)
+        const createCard = await FlashyAPI.createCard(frontText, backText, flashsetid)
         const newData = await FlashyAPI.fetchSingleFlashset(createCard.flashset)
         setFlashset(newData)
         handleClose()
     }
+
+    // const handleSubmit = async () => {
+    //     const frontText = document.getElementById('form.input1').value
+    //     const backText = document.getElementById('form.input2').value
+    //     console.log('frontText:', frontText)
+    //     console.log('backText:', backText)
+    //     console.log('flashsetID:', flashsetid)
+    //     handleClose()
+    // }
 
 
     return (

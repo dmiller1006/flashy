@@ -9,7 +9,7 @@ const FlashSetCard = (props) => {
 
   return (
     <div>
-        <Card className="flashcard-top">
+        <Card className="card-top">
             <Card.Body>
                 <Card.Title>{flashsetinfo.title}</Card.Title>
                 <Link to={`${flashsetinfo.id}/`}>

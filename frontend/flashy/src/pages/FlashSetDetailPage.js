@@ -8,15 +8,13 @@ import FlashCard from '../components/FlashCard'
 import { Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import EditModal from '../components/EditModal'
+import NewCardModal from '../components/NewCardModal'
 
 
 
 const FlashSetDetailPage = () => {
     // state
     const [flashset, setFlashset] = useState(null)
-    const [newName, setNewName] = useState(null)
-    console.log('newName', newName)
-
 
     // router props
     const params = useParams()
@@ -33,7 +31,9 @@ const FlashSetDetailPage = () => {
       if (!flashset) {
         return 'loading ...'
       }
-      return flashset['cards'].map((card, idx) => {
+      const cardsArray = FlashyAPI.shuffle(flashset['cards'])
+
+      return cardsArray.map((card, idx) => {
         return <FlashCard key={idx} card={card} />
       })
     }
@@ -42,10 +42,13 @@ const FlashSetDetailPage = () => {
       if (!flashset) {
         return '... loading'
       }
+  
 
       return<>
-        <EditModal setNewName={setNewName}/>
-        <Button variant="primary" style={{ marginTop: '30px' }} className="mx-5">add card</Button>
+        <NewCardModal flashsetid={params.id} setFlashset={setFlashset}/>
+        <EditModal flashsetid={params.id}/>
+        <Link to={`/flashsets/${params.id}`}><Button variant="warning" style={{ marginTop: '30px' }} className="mx-5">shuffle/reset</Button></Link>
+        {/* <Button variant="primary" style={{ marginTop: '30px' }} className="mx-5">add card</Button> */}
         <Link to={`delete`}><Button variant="danger" style={{ marginTop: '30px' }} className="mx-5">delete flashset</Button></Link>
       </>
     }

@@ -2,6 +2,7 @@ import React from 'react'
 import NavBar from '../components/NavBar'
 import { Button } from 'react-bootstrap'
 import {  Link } from "react-router-dom"
+import Footer from '../components/Footer'
 
 
 const TriviaHomePage = () => {
@@ -20,6 +21,9 @@ const TriviaHomePage = () => {
                 <li><Button className="triviaButton">option 3</Button></li>
                 <li><Button className="triviaButton">option 4</Button></li>
             </ul>
+            <div style={{ position: 'absolute', width: '100%', bottom: '0' }}>
+                <Footer />
+            </div>
         </div>
     )
 }

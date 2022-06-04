@@ -1,8 +1,9 @@
 import { useState } from 'react'
 import { Modal, Form, Button } from 'react-bootstrap'
+import FlashyAPI from '../api/FlashyAPI'
 
 
-const EditModal = ({setNewName}) => {
+const EditModal = ({flashsetid}) => {
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
@@ -10,8 +11,11 @@ const EditModal = ({setNewName}) => {
 
     const handleSubmit = (event) => {
         event.preventDefault()
-        setNewName(document.getElementById('editTitleForm.Input1').value)
+        const newTitle = document.getElementById('editTitleForm.Input1').value
+        FlashyAPI.editFlashsetTitle(flashsetid, newTitle)
+        console.log('newTitle:', newTitle)
         handleClose()
+        window.location.reload()
     }
 
 

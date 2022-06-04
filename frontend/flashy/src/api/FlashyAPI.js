@@ -51,7 +51,7 @@ const deleteFlashset = async (flashsetObj) => {
 }
 
 const editFlashsetTitle = async (flashsetObj, newName) => {
-    const url = `http://127.0.0.1:8000/flashsets/${flashsetObj.id}/`
+    const url = `http://127.0.0.1:8000/flashsets/${flashsetObj}/`
     const bodyObj = {
         "title": newName
     }
@@ -90,6 +90,18 @@ const getRandomTrivia = async (num) => {
     return data
 }
 
+const shuffle = (arr) => {
+    let currentIndex = arr.length, randomIndex;
+
+    while (currentIndex !== 0) {
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
+        [arr[currentIndex], arr[randomIndex]] = [
+            arr[randomIndex], arr[currentIndex]];
+    }
+
+    return arr;
+}
 
 const exportItems = {
     fetchFlashsets,
@@ -99,6 +111,8 @@ const exportItems = {
     editFlashsetTitle,
     createCard,
     getRandomTrivia,
+    shuffle,
 }
+
 
 export default exportItems

@@ -3,6 +3,7 @@
     flex-wrap: wrap;
     width: 60%;
     justify-content: center;
+    align-items:flex-start;
     margin: 0 auto;
     /* Or whatever */
 }
@@ -15,10 +16,21 @@
 }
 
 
-.card {
+.card-top {
     background-image:
         linear-gradient(180deg, white 3rem, #F0A4A4 calc(3rem), #F0A4A4 calc(3rem + 2px), transparent 1px),
         repeating-linear-gradient(0deg, transparent, transparent 1.5rem, #DDD 1px, #DDD calc(1.5rem + 1px));
+    box-shadow: 5px 5px 3px rgba(0, 0, 0, .25);
+    height: 14rem;
+    width: 400px;
+
+    margin: auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.card-bottom {
     box-shadow: 5px 5px 3px rgba(0, 0, 0, .25);
     height: 14rem;
     width: 400px;
