@@ -18,6 +18,7 @@ const TriviaHomePage = () => {
             <ul>
                 <li><Link to="/trivia/random"><Button className="triviaButton">random</Button></Link></li>
                 <li><Link to="/trivia/bycategory"><Button className="triviaButton">by category</Button></Link></li>
+                <li><Link to="/trivia/truefalse"><Button className="triviaButton">true / false</Button></Link></li>
             </ul>
             <div style={{ position: 'absolute', width: '100%', bottom: '0' }}>
                 <Footer />

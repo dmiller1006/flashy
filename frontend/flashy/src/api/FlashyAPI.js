@@ -121,6 +121,18 @@ const getQueryQuestions = async (query) => {
     return data
 }
 
+const getTrueFalse = async (num) => {
+    const url = `https://opentdb.com/api.php?amount=${num}&type=boolean`
+    const data = await tryCatchFetch(url)
+    return data['results']
+}
+
+function decodeHTMLEntities(str) {
+    var txt = document.createElement('textarea');
+    txt.innerHTML = str;
+    return txt.value;
+}
+
 const exportItems = {
     fetchFlashsets,
     fetchSingleFlashset,
@@ -133,6 +145,8 @@ const exportItems = {
     getCategories,
     getCategoryQuestions,
     getQueryQuestions,
+    getTrueFalse,
+    decodeHTMLEntities,
 }
 
 
