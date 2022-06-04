@@ -45,3 +45,13 @@
 .triviaButton {
   margin: 25px;
 }
+
+.triviaForm {
+  width: 10%;
+  margin: 0 auto;
+}
+
+.queryForm {
+  width: 40%;
+  margin: 0 auto;
+}

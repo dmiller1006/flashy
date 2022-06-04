@@ -47,7 +47,7 @@ const FlashSetDetailPage = () => {
       return<>
         <NewCardModal flashsetid={params.id} setFlashset={setFlashset}/>
         <EditModal flashsetid={params.id}/>
-        <Link to={`/flashsets/${params.id}`}><Button variant="warning" style={{ marginTop: '30px' }} className="mx-5">shuffle/reset</Button></Link>
+        <Button onClick={() => window.location.reload()}variant="warning" style={{ marginTop: '30px' }} className="mx-5">shuffle/reset</Button>
         {/* <Button variant="primary" style={{ marginTop: '30px' }} className="mx-5">add card</Button> */}
         <Link to={`delete`}><Button variant="danger" style={{ marginTop: '30px' }} className="mx-5">delete flashset</Button></Link>
       </>

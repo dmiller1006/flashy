@@ -1,6 +1,5 @@
 import ReactCardFlip from 'react-card-flip';
 import React, { Component } from 'react'
-import FlashCard from '../components/FlashCard'
 
 
 export class ReactFlashFlip extends Component {

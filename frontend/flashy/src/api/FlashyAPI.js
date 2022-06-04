@@ -86,7 +86,6 @@ const createCard = async (frontText, backText, flashsetID) => {
 const getRandomTrivia = async (num) => {
     const url = `https://the-trivia-api.com/api/questions?limit=${num}`
     const data = await tryCatchFetch(url)
-    console.log(data)
     return data
 }
 
@@ -103,6 +102,25 @@ const shuffle = (arr) => {
     return arr;
 }
 
+const getCategories = async () => {
+    const url = `https://the-trivia-api.com/api/categories`
+    const data = await tryCatchFetch(url)
+    return data
+}
+
+const getCategoryQuestions = async () => {
+    const url = `https://the-trivia-api.com/api/questions?categories=film_and_tv`
+    const data = await tryCatchFetch(url)
+    console.log(data)
+    return data
+}
+
+const getQueryQuestions = async (query) => {
+    const data = await tryCatchFetch(query)
+    console.log(data)
+    return data
+}
+
 const exportItems = {
     fetchFlashsets,
     fetchSingleFlashset,
@@ -112,6 +130,9 @@ const exportItems = {
     createCard,
     getRandomTrivia,
     shuffle,
+    getCategories,
+    getCategoryQuestions,
+    getQueryQuestions,
 }
 
 
