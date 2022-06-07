@@ -1,7 +1,5 @@
 import React from 'react'
 import { useState } from 'react'
-import TriviaCardFront from './TriviaCardFront'
-import TriviaCardBack from './TriviaCardBack'
 import FlashyAPI from '../api/FlashyAPI'
 
 const TrueFalseCard = ({ question, answer }) => {

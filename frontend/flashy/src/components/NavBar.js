@@ -2,6 +2,7 @@ import React from 'react'
 import { Nav, Navbar, Container } from 'react-bootstrap';
 
 const NavBar = () => {
+
   return (
     <Navbar bg="dark" variant="dark" expand="lg">
       <Container fluid>
@@ -22,6 +23,17 @@ const NavBar = () => {
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
+            <Navbar.Collapse className="justify-content-end">
+          <Navbar.Text className='px-5'>
+            <a href="/signup">signup</a>
+          </Navbar.Text>
+          <Navbar.Text className='px-5'>
+                <a href="/login">login</a>
+              </Navbar.Text>
+          <Navbar.Text className='px-5'>
+            <a href="/logout">logout</a>
+          </Navbar.Text>
+            </Navbar.Collapse>
       </Container>
     </Navbar>
   )

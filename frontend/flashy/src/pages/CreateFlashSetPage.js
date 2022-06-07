@@ -29,7 +29,7 @@ const CreateFlashSetPage = () => {
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>flashset name:</Form.Label>
           <Form.Control placeholder="enter a flashset name" />
-          <Form.Text className="text-muted">
+          <Form.Text style={{ color: 'black' }}>
             make sure you use a creative name for your flashset name
           </Form.Text>
         </Form.Group>

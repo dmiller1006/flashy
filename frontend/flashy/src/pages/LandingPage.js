@@ -4,6 +4,12 @@ import Footer from '../components/Footer'
 
 
 const LandingPage = () => {
+  sessionStorage.setItem('token', '')
+  sessionStorage.setItem('username', '')
+  localStorage.setItem('token', '')
+  localStorage.setItem('username', '')
+
+
   return (
     <div className="wrapper">
       <NavBar />
