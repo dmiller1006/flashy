@@ -2,7 +2,7 @@ import NavBar from '../components/NavBar'
 import Footer from '../components/Footer'
 import { Form, Button, Alert } from 'react-bootstrap'
 import Accounts from '../api/Accounts'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 
@@ -18,6 +18,15 @@ const LoginPage = ({isSignedIn, setSignedIn}) => {
             return <Alert key='danger' variant='danger' style={{ width: '50%', margin: '0 auto' }}>there was a sign-in error, please try again..</Alert>
         }
     }
+
+    useEffect(() => {
+        const handleLoad = async () => {
+            sessionStorage.removeItem('token')
+            sessionStorage.removeItem('username')
+            setSignedIn(false)
+        }
+        handleLoad()
+    }, [])
 
     const handleSubmit = async (e) => {
         e.preventDefault()

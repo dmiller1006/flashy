@@ -2,7 +2,7 @@
 import './App.css';
 
 // router
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 
 // state
 import { useEffect, useState } from 'react'
@@ -39,7 +39,19 @@ const App = () => {
         <Routes>
           <Route exact path="/" element={<LandingPage /> }/>
           <Route exact path="/home/" element={ <HomePage /> }/>
-          <Route exact path="/flashsets/" element={<FlashSetListPage /> }/>
+
+          <Route exact path="/flashsets/" element={
+            <RequireAuth redirectTo="/login">
+              <FlashSetListPage />
+            </RequireAuth>
+          }/>
+
+          <Route exact path="/flashsets/new" element={
+            <RequireAuth redirectTo="/login">
+              <CreateFlashSetPage />
+            </RequireAuth>
+          } />
+
           <Route exact path="/flashsets/new" element={ <CreateFlashSetPage /> }/>
           <Route exact path="account/" element={ <AccountPage /> }/>
           <Route exact path="trivia/" element={ <TriviaHomePage /> }/>
@@ -49,12 +61,18 @@ const App = () => {
           <Route exact path="trivia/bycategory" element={<TriviaByCategory />} />
           <Route exact path="trivia/truefalse" element={<TrueFalsePage />} />
           <Route exact path="login" element={<LoginPage isSignedIn={isSignedIn} setSignedIn={setSignedIn}/> } />
-          <Route exact path="signup" element={<SignupPage />} />
+          <Route exact path="signup" element={<SignupPage isSignedIn={isSignedIn} setSignedIn={setSignedIn} />} />
           <Route exact path="logout" element={<LogoutPage isSignedIn={isSignedIn} setSignedIn={setSignedIn} />} />
         </Routes>
       </BrowserRouter>
     </div>
   );
+}
+
+function RequireAuth( {children, redirectTo }) {
+  let isAuthenticated = sessionStorage.getItem('token') ? true : false
+  if (isAuthenticated == false) { alert('You must be logged in to access these flashsets. You are being redirected to the login page.')}
+  return isAuthenticated ? children : <Navigate to={redirectTo} />;
 }
 
 export default App;

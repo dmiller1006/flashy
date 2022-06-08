@@ -61,7 +61,7 @@ const TriviaByCategoryPage = () => {
             </Form.Select>
             <Form.Select aria-label="Default select example" style={{ width: '30%', margin: '0 auto' }} onChange={(e) => dropdownSelect(e)} disabled={button}>
                 <option>select category</option>
-                <option value="&categories=arts_and_literature">Arts & Literature</option>
+                <option value="&categories=arts_and_literature">arts & literature</option>
                 <option value="&categories=film_and_tv">film & tv</option>
                 <option value="&categories=food_and_drink">food & drink</option>
                 <option value="&categories=general_knowledge">general knowledge</option>

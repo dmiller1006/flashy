@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import NavBar from '../components/NavBar'
 import Footer from '../components/Footer'
 import { Form, Button } from 'react-bootstrap'
 import Accounts from '../api/Accounts'
 import { useNavigate } from 'react-router-dom'
 
-const SignupPage = () => {
+const SignupPage = ({ isSignedIn, setSignedIn }) => {
     const navigate = useNavigate()
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -14,6 +14,15 @@ const SignupPage = () => {
         Accounts.signupUser(username, password)
         navigate('/login')
     }
+
+    useEffect(() => {
+        const handleLoad = async () => {
+            sessionStorage.removeItem('token')
+            sessionStorage.removeItem('username')
+            setSignedIn(false)
+        }
+        handleLoad()
+    }, [])
 
     return (
         <div className="wrapper">
