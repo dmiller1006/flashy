@@ -38,7 +38,9 @@
 }
 
 .wrapper {
-  background-color: gray;
+  background-image: url("../src/images/alex-mccarthy-y5deIvLooMM-unsplash.jpg");
+  background-size: 100% auto;
+  /* background-color: gray; */
   height: 100vh;
 }
 
@@ -55,3 +57,4 @@
   width: 40%;
   margin: 0 auto;
 }
+

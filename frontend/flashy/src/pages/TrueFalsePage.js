@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import NavBar from '../components/NavBar'
 import FlashyAPI from '../api/FlashyAPI'
 import { Form, Button } from 'react-bootstrap'
-import TriviaCard from '../components/TriviaCard'
 import TrueFalseCard from '../components/TrueFalseCard'
 
 
