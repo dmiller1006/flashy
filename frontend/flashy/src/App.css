@@ -40,6 +40,7 @@
 .wrapper {
   background-image: url("../src/images/alex-mccarthy-y5deIvLooMM-unsplash.jpg");
   background-size: 100% auto;
+  background-repeat: repeat-y;
   /* background-color: gray; */
   height: 100vh;
 }

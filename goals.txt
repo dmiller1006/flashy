@@ -1,0 +1,9 @@
+Scoring
+Social Media Posts
+Timer
+Daily
+Import/export CSVs
+Dynamically create sets
+Share sets with other users
+Share scores or challenge other users
+
