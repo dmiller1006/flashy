@@ -15,7 +15,6 @@ const tryCatchFetch = async (url, init = null) => {
 }
 
 const signupUser = async (username, password) => {
-    console.log(username,password)
     // post request to http://127.0.0.1:8000/accounts/signup with username/password body
     const url = 'http://127.0.0.1:8000/accounts/signup'
     const user = {
